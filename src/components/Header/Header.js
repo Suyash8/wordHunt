@@ -13,16 +13,17 @@ const Header = (
 		setCategory, 
 		category, 
 		setWord, 
-		word
+		word,
+		LightMode
 	}
 ) => {
 
 	const darkTheme = createMuiTheme({
 		palette: {
 			primary: {
-				main: '#FFF'
+				main:LightMode?"#000": '#FFF'
 			},
-			type: "dark",
+			type:LightMode?"light": "dark",
 		},
 	});
 
